@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bomb Blast Animation</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="scene">
+        <div class="bomb"></div>
+        <div class="blast"></div>
+    </div>
+
+    <button class="trigger">Detonate</button>
+
+    <script>
+        const button = document.querySelector('.trigger');
+        const blast = document.querySelector('.blast');
+
+        button.addEventListener('click', () => {
+            blast.classList.add('active');
+            setTimeout(() => {
+                blast.classList.remove('active');
+            }, 2000); // Reset the animation after 2 seconds
+        });
+    </script>
+</body>
+</html>
